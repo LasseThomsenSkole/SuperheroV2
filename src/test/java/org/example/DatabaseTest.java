@@ -36,7 +36,13 @@ class DatabaseTest {
         String actualName = result.getName();
 
         assertEquals(expectedName, actualName);
-
-
+    }
+    @Test
+    void deleteSuperhero(){
+        String name = "abe";
+        db.deleteSuperhero(name);
+        Superhero result = db.searchSuperhero(name);
+        assertNull(result);
+// superheroList.removeIf(superhero -> superhero.getName() == name);
     }
 }

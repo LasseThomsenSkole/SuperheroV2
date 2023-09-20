@@ -254,5 +254,16 @@ public class Database {
     public ArrayList<Superhero> getSuperheroList() {
         return superheroList;
     }
+
+    public void deleteSuperhero(String name) {
+//        for (Superhero superhero:superheroList ) {
+//            if(superhero.getName()==name){
+//                superheroList.remove(superhero);
+//            }
+//        break;
+//        }
+        superheroList.removeIf(superhero -> superhero.getName() == name);
+
+    }
 }
 

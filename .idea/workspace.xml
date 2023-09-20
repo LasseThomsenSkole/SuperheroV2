@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Superhero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" afterDir="false" />
+    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="added test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +57,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DatabaseTest.searchSuperhero">
+  <component name="RunManager" selected="JUnit.DatabaseTest.deleteSuperhero">
     <configuration name="DatabaseTest.addSuperhero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SuperheroTest" />
       <extension name="coverage">
@@ -75,6 +69,22 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DatabaseTest" />
       <option name="METHOD_NAME" value="addSuperhero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest.deleteSuperhero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperheroTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DatabaseTest" />
+      <option name="METHOD_NAME" value="deleteSuperhero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,6 +108,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DatabaseTest.deleteSuperhero" />
         <item itemvalue="JUnit.DatabaseTest.searchSuperhero" />
         <item itemvalue="JUnit.DatabaseTest.addSuperhero" />
       </list>
@@ -111,11 +122,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695127105520</updated>
-      <workItem from="1695127106541" duration="2270000" />
+      <workItem from="1695127106541" duration="4252000" />
     </task>
+    <task id="LOCAL-00001" summary="added test">
+      <option name="closed" value="true" />
+      <created>1695191109825</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695191109825</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added test">
+      <option name="closed" value="true" />
+      <created>1695191118671</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695191118671</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test" />
   </component>
 </project>

@@ -1,6 +1,5 @@
 package org.example;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -124,7 +123,7 @@ public class Database {
         ArrayList<Superhero> editSearchResult = searchSuperheroMultiple(editInput);
         Superhero superheroToBeEdited = null;
 
-        if (editSearchResult.size() == 0) {
+        if (editSearchResult.isEmpty()) {
             System.out.println("Superhelt blev ik fundet");
 
         } else if (editSearchResult.size() > 1) {
@@ -222,7 +221,6 @@ public class Database {
                 }
             }
 
-
             System.out.println("Superheltens styrketal: " + superheroToBeEdited.getStrength());
             while (true){
                 newValue = keyboard.nextLine();
@@ -241,6 +239,7 @@ public class Database {
             System.out.println("Superhelten er redigeret");
         }
     }
+
     public void superheroInfo(Superhero superhero) {
         System.out.println("Superheltens navn: " + superhero.getName());
         if (superhero.getRealName() != null) {
@@ -252,19 +251,13 @@ public class Database {
         System.out.println("Superheltens styrke:  " + superhero.getStrength());
     }
 
-    public ArrayList<Superhero> getSuperheroList() {
-        return superheroList;
-    }
-
     public void deleteSuperhero(String name) {
-//        for (Superhero superhero:superheroList ) {
-//            if(superhero.getName()==name){
-//                superheroList.remove(superhero);
-//            }
-//        break;
-//        }
         superheroList.removeIf(superhero -> Objects.equals(superhero.getName(), name));
 
+    }
+
+    public ArrayList<Superhero> getSuperheroList() {
+        return superheroList;
     }
 }
 

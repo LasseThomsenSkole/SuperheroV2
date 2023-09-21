@@ -43,6 +43,5 @@ class DatabaseTest {
         db.deleteSuperhero(name);
         Superhero result = db.searchSuperhero(name);
         assertNull(result);
-// superheroList.removeIf(superhero -> superhero.getName() == name);
     }
 }

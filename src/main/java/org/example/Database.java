@@ -1,6 +1,7 @@
 package org.example;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Database {
@@ -262,7 +263,7 @@ public class Database {
 //            }
 //        break;
 //        }
-        superheroList.removeIf(superhero -> superhero.getName() == name);
+        superheroList.removeIf(superhero -> Objects.equals(superhero.getName(), name));
 
     }
 }

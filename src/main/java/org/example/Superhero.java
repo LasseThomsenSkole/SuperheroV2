@@ -74,13 +74,23 @@ public class Superhero {
     }
 
     public String toString() {
-        return "Superhero{" +
-                "name='" + name + '\'' +
-                ", realName='" + realName + '\'' +
-                ", superPower='" + superPower + '\'' +
-                ", yearCreated=" + yearCreated +
-                ", isHuman=" + isHuman +
-                ", strength=" + strength +
-                '}' + "\n";
+        if (getRealName() == null){
+            return "Superhero{" +
+                    "name='" + name + '\''  +
+                    ", superPower='" + superPower + '\'' +
+                    ", yearCreated=" + yearCreated +
+                    ", isHuman=" + isHuman +
+                    ", strength=" + strength +
+                    '}' + "\n";
+        }else {
+            return "Superhero{" +
+                    "name='" + name + '\'' +
+                    ", realName='" + realName + '\'' +
+                    ", superPower='" + superPower + '\'' +
+                    ", yearCreated=" + yearCreated +
+                    ", isHuman=" + isHuman +
+                    ", strength=" + strength +
+                    '}' + "\n";
+        }
     }
 }

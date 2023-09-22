@@ -111,11 +111,6 @@ public class Database {
     }
 
 
-
-
-
-
-
     public void edit() {
         System.out.println("søg efter personen du ville redigere: ");
         String editInput = keyboard.nextLine();

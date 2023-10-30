@@ -67,7 +67,10 @@ public class UserInterface {
                     String singleSearchInput = keyboard.next();
                     Superhero result = database.searchSuperhero(singleSearchInput);
                     if (result != null) {
+                        System.out.println("Søgning: ");
                         database.superheroInfo(result);
+                    }else {
+                        System.out.println("Superhelten blev ikke fundet");
                     }
                     break;
                 case 3: //search multiple superheroes
@@ -79,6 +82,7 @@ public class UserInterface {
 
                     System.out.println("Hvem vil du redigere? ");
                     database.edit();
+
 
                     break;
                 case 5: //delete superhero

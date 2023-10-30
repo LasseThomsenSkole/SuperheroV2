@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Database {
     ArrayList<Superhero> superheroList;
     Scanner keyboard = new Scanner(System.in);
+    Superhero superheroToBeEdited = null;
 
     public Database() {
 
@@ -24,49 +25,10 @@ public class Database {
 
     public void addSuperhero(String superName, String realName, String superpower, int birthYear,String isHuman, double strength) {
 
-        System.out.println("Indtast kaldenavn");
-        String superName = keyboard.next();
-
-        System.out.println("Indtast rigtige navn");
-        String realName = keyboard.next();
-
-        System.out.println("Indtast superkræft");
-        String superpower = keyboard.next();
-
-        System.out.println("Indtast fødselsår");
-        //Input mismatch håndtering
-        while (!keyboard.hasNextInt()) {
-            System.out.println("du skal skrive et hel tal: ");
-            keyboard.next();
-        }
-        int birthYear = keyboard.nextInt();
-
-        String isHuman = null;
-        while (isHuman == null) {
-            System.out.println("Er din superhelt et menneske? [ja/nej]");
-
-            String erMenneskeInput = keyboard.next();
-
-            if (erMenneskeInput.equals("ja")) {
-                isHuman = "er menneske";
-            } else if (erMenneskeInput.equals("nej")) {
-                isHuman = "er ikke menneske";
-
-            }
-        }
-
-        double strength;
-        System.out.println("Indtast styrketal");
-        while (!keyboard.hasNextDouble()) {
-            System.out.println("du skal angive et tal:");
-            keyboard.next();
-        }
-        strength = keyboard.nextDouble();
-
         //add superhelten til arrayListen
         superheroList.add(new Superhero(superName, realName, superpower, birthYear, isHuman, strength));
 
-        System.out.println(superheroList + " blev oprettet");
+
 
 
     }
@@ -75,7 +37,7 @@ public class Database {
 
         ArrayList<String> heroes = new ArrayList<>();
 
-        System.out.println("Søgning: ");
+
 
         //foreach loop som sammenligner søgning med superheroes på superheroList
         for (Superhero superhero : superheroList) {
@@ -86,9 +48,6 @@ public class Database {
 
                     return superhero;
 
-                }
-                if(heroes.isEmpty()){
-                    System.out.println("ikke fundet");
                 }
             }
         }
@@ -111,7 +70,7 @@ public class Database {
     }
 
 
-    public void edit() {
+    public void edit(String editInput, String choiceInput, String name, String realName,String superpower, int birthYear, String isHuman, double Strength) {
         System.out.println("søg efter personen du ville redigere: ");
         String editInput = keyboard.nextLine();
 

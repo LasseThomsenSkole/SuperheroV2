@@ -22,7 +22,7 @@ public class Database {
 
     }
 
-    public void addSuperhero() {
+    public void addSuperhero(String superName, String realName, String superpower, int birthYear,String isHuman, double strength) {
 
         System.out.println("Indtast kaldenavn");
         String superName = keyboard.next();
@@ -106,7 +106,7 @@ public class Database {
                 searchResult.add(superhero);
             }
         }
-        System.out.println(searchResult);
+        //System.out.println(searchResult);
         return searchResult;
     }
 
@@ -116,7 +116,6 @@ public class Database {
         String editInput = keyboard.nextLine();
 
         ArrayList<Superhero> editSearchResult = searchSuperheroMultiple(editInput);
-        Superhero superheroToBeEdited = null;
 
         if (editSearchResult.isEmpty()) {
             System.out.println("Superhelt blev ik fundet");
@@ -153,7 +152,7 @@ public class Database {
             }
             superheroToBeEdited = editSearchResult.get(choice - 1);
         } else {
-            superheroToBeEdited = editSearchResult.get(0);
+            superheroToBeEdited = editSearchResult.get(0); //den første i arraylisten
         }
 
         if (superheroToBeEdited != null) {

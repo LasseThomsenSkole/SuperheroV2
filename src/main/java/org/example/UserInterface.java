@@ -18,7 +18,48 @@ public class UserInterface {
             menuInput = keyboard.nextInt();
             switch (menuInput) {
                 case 1: //add superhero
-                    database.addSuperhero();
+                    System.out.println("Indtast kaldenavn");
+                    String superName = keyboard.next();
+
+                    System.out.println("Indtast rigtige navn");
+                    String realName = keyboard.next();
+
+                    System.out.println("Indtast superkræft");
+                    String superpower = keyboard.next();
+
+                    System.out.println("Indtast fødselsår");
+                    //Input mismatch håndtering
+                    while (!keyboard.hasNextInt()) {
+                        System.out.println("du skal skrive et hel tal: ");
+                        keyboard.next();
+                    }
+                    int birthYear = keyboard.nextInt();
+
+                    String isHuman = null;
+                    while (isHuman == null) {
+                        System.out.println("Er din superhelt et menneske? [ja/nej]");
+
+                        String erMenneskeInput = keyboard.next();
+
+                        if (erMenneskeInput.equals("ja")) {
+                            isHuman = "er menneske";
+                        } else if (erMenneskeInput.equals("nej")) {
+                            isHuman = "er ikke menneske";
+
+                        }
+                    }
+
+                    double strength;
+                    System.out.println("Indtast styrketal");
+                    while (!keyboard.hasNextDouble()) {
+                        System.out.println("du skal angive et tal:");
+                        keyboard.next();
+                    }
+                    strength = keyboard.nextDouble();
+
+                    database.addSuperhero(superName, realName, superpower, birthYear, isHuman, strength);
+
+                    System.out.println(database.searchSuperhero(superName) + " blev oprettet");
 
                     break;
                 case 2: //search for superhero
@@ -32,7 +73,7 @@ public class UserInterface {
                 case 3: //search multiple superheroes
                     System.out.println("søg efter flere superhelte: ");
                     String searchInput = keyboard.next();
-                    database.searchSuperheroMultiple(searchInput);
+                    System.out.println(database.searchSuperheroMultiple(searchInput));
                     break;
                 case 4: //edit superhero
 

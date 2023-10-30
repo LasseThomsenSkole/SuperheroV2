@@ -18,7 +18,7 @@ class DatabaseTest {
     @Test
     void addSuperhero() {
         int startSize = 3;
-        db.addSuperhero();
+        db.addSuperhero("asdasd","asdasd","asdasd",213,"ja",23);
         int expectedSize = startSize + 1;
         int actualSize = db.getSuperheroList().size();
 

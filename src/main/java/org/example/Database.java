@@ -70,126 +70,37 @@ public class Database {
     }
 
 
-    public void edit(String editInput, String choiceInput, String name, String realName,String superpower, int birthYear, String isHuman, double Strength) {
-        System.out.println("søg efter personen du ville redigere: ");
-        String editInput = keyboard.nextLine();
-
-        ArrayList<Superhero> editSearchResult = searchSuperheroMultiple(editInput);
-
-        if (editSearchResult.isEmpty()) {
-            System.out.println("Superhelt blev ik fundet");
-
-        } else if (editSearchResult.size() > 1) {
-            System.out.println("vælg person");
-            int count = 1;
-            for (Superhero superhero : editSearchResult) {
-                System.out.println(count++ + ". " +
-                        superhero.getName() + " " +
-                        superhero.getRealName() + " " +
-                        superhero.getSuperPower() + " " +
-                        superhero.getYearCreated() + " " +
-                        superhero.getIsHuman() + " " +
-                        superhero.getStrength()
-                );
-            }
-            int choice;
-
-            while (true) {
-                String choiceInput = keyboard.nextLine();
-
-                try {
-                    choice = Integer.parseInt(choiceInput);
-                    if (choice >=1 && choice <= superheroList.size()) {
-                        break;
-                    } else{
-                        System.out.println("Ugyldig valg");
-                    }
-                } catch (NumberFormatException numberFormatException ) {
-                    System.out.println("Ugyldigt valg");
-                }
-
-            }
-            superheroToBeEdited = editSearchResult.get(choice - 1);
-        } else {
-            superheroToBeEdited = editSearchResult.get(0); //den første i arraylisten
-        }
-
+    public void edit(Superhero superheroToBeEdited, String name, String realName,String superpower, int birthYear, String isHuman, double strength) {
+        // if name is empty then don't set.
         if (superheroToBeEdited != null) {
-            System.out.println("Rediger superhelt. Tryk Enter hvis du ikke ville ændre værdien.");
-            String newValue;
 
-            System.out.println("Navn: " + superheroToBeEdited.getName());
-            newValue = keyboard.nextLine();
-            if (!newValue.isEmpty()) {
-                superheroToBeEdited.setName(newValue);
+            if (!name.isEmpty()) {
+                superheroToBeEdited.setName(name);
+            }
+            if (!realName.isEmpty()) {
+                superheroToBeEdited.setRealName(realName);
+            }
+            if (!superpower.isEmpty()) {
+                superheroToBeEdited.setSuperPower(superpower);
             }
 
-            System.out.println("rigtige navn: " + superheroToBeEdited.getRealName());
-            newValue = keyboard.nextLine();
-
-            if (!newValue.isEmpty()) {
-                superheroToBeEdited.setRealName(newValue);
-            }
-
-
-            System.out.println("Superkræft: " + superheroToBeEdited.getSuperPower());
-            newValue = keyboard.nextLine();
-            if (!newValue.isEmpty()) {
-                superheroToBeEdited.setSuperPower(newValue);
-            }
-
-            System.out.println("Fødselsår: " + superheroToBeEdited.getYearCreated());
-            while (true) {
-                newValue = keyboard.nextLine();
-                try {
-                    if (!newValue.isEmpty()) {
-                        int year = Integer.parseInt(newValue);
-                        superheroToBeEdited.setYearCreated(year);
-                    }
-                    break;
-                }catch (NumberFormatException n) {
-                    System.out.println("du skal skrive et heltal");
-                }
+            //System.out.println("Fødselsår: " + superheroToBeEdited.getYearCreated());
+            if (!(birthYear == 0)){
+                superheroToBeEdited.setYearCreated(birthYear);
             }
 
 
-            System.out.println("Er superhelten menneske? " + superheroToBeEdited.getIsHuman());
+            //System.out.println("Er superhelten menneske? " + superheroToBeEdited.getIsHuman());
 
-
-            while (true) {
-                newValue = keyboard.nextLine();
-                if (!newValue.isEmpty()){
-                    if (newValue.contains("ja")) {
-                        superheroToBeEdited.setIsHuman(newValue);
-                        break;
-                    } else if (newValue.contains("nej")) {
-                        superheroToBeEdited.setIsHuman(newValue);
-                        break;
-
-                    } else {
-                        System.out.println("Du kan kun skrive ja eller nej");
-                    }
-                }else{
-                    break;
-                }
+            if(!isHuman.isEmpty()){
+                superheroToBeEdited.setIsHuman(isHuman);
             }
 
-            System.out.println("Superheltens styrketal: " + superheroToBeEdited.getStrength());
-            while (true){
-                newValue = keyboard.nextLine();
-                try {
-                    if (!newValue.isEmpty()) {
-                        double styrke = Double.parseDouble(newValue);
-                        superheroToBeEdited.setStrength(styrke);
-                    }
-                    break;
-                }catch (NumberFormatException n){
-                    System.out.println("Du skal skrive et tal med punktum");
-                }
+            //System.out.println("Superheltens styrketal: " + superheroToBeEdited.getStrength());
+            if(!(strength == 0)){
+                superheroToBeEdited.setStrength(strength);
             }
 
-            superheroInfo(superheroToBeEdited);
-            System.out.println("Superhelten er redigeret");
         }
     }
 

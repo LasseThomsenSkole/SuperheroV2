@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="minor changes and comments added">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="Refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" afterDir="false" />
-    </list>
-    <list id="e42bdf7d-e961-4973-ad0b-716af456dd0e" name="Changes by Severius" comment="" />
-    <list id="0cdbdc5f-66da-403d-8033-aac23e2dde37" name="Changes by soren" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
     </list>
@@ -32,31 +25,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java">
-      <ranges>
-        <range start1="20" end1="21" start2="20" end2="62" changelist="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" />
-        <range start1="28" end1="28" start2="69" end2="70" changelist="0cdbdc5f-66da-403d-8033-aac23e2dde37" />
-        <range start1="29" end1="29" start2="71" end2="73" changelist="0cdbdc5f-66da-403d-8033-aac23e2dde37" />
-        <range start1="34" end1="35" start2="78" end2="79" changelist="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" />
-        <range start1="40" end1="40" start2="84" end2="85" changelist="0cdbdc5f-66da-403d-8033-aac23e2dde37" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/org/example/Database.java">
-      <ranges>
-        <range start1="8" end1="8" start2="8" end2="9" changelist="0cdbdc5f-66da-403d-8033-aac23e2dde37" />
-        <range start1="24" end1="25" start2="25" end2="26" changelist="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" />
-        <range start1="26" end1="65" start2="27" end2="27" changelist="0cdbdc5f-66da-403d-8033-aac23e2dde37" />
-        <range start1="68" end1="69" start2="30" end2="31" changelist="0cdbdc5f-66da-403d-8033-aac23e2dde37" />
-        <range start1="77" end1="78" start2="39" end2="40" changelist="0cdbdc5f-66da-403d-8033-aac23e2dde37" />
-        <range start1="89" end1="92" start2="51" end2="51" changelist="0cdbdc5f-66da-403d-8033-aac23e2dde37" />
-        <range start1="108" end1="109" start2="67" end2="68" changelist="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" />
-        <range start1="113" end1="114" start2="72" end2="73" changelist="0cdbdc5f-66da-403d-8033-aac23e2dde37" />
-        <range start1="118" end1="119" start2="77" end2="77" changelist="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" />
-        <range start1="155" end1="156" start2="113" end2="114" changelist="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -66,22 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -170,7 +138,8 @@
       <option name="presentableId" value="Default" />
       <updated>1695127105520</updated>
       <workItem from="1695127106541" duration="10010000" />
-      <workItem from="1698675498166" duration="1450000" />
+      <workItem from="1698675498166" duration="3324000" />
+      <workItem from="1698755361893" duration="6435000" />
     </task>
     <task id="LOCAL-00001" summary="added test">
       <option name="closed" value="true" />
@@ -220,7 +189,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695327232055</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactoring">
+      <option name="closed" value="true" />
+      <created>1698677041342</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698677041342</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changes by soren">
+      <option name="closed" value="true" />
+      <created>1698677049499</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698677049499</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +216,8 @@
     <MESSAGE value="added deleteSuperhero&#10;added unitTest for deleSuperhero&#10;added UserInterface" />
     <MESSAGE value="minor update" />
     <MESSAGE value="minor changes and comments added" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes and comments added" />
+    <MESSAGE value="Refactoring" />
+    <MESSAGE value="Changes by soren" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by soren" />
   </component>
 </project>

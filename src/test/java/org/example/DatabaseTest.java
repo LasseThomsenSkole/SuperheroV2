@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DatabaseTest {
     Database db;
+    Superhero superheroTest4 = new Superhero("abe", "kat", "kaste bananer", 2003, "nej", 12.1);
+
     @BeforeEach
     void setUp() {
         db = new Database();
@@ -43,5 +45,13 @@ class DatabaseTest {
         db.deleteSuperhero(name);
         Superhero result = db.searchSuperhero(name);
         assertNull(result);
+    }
+    @Test
+    void editSuperhero(){
+        String newName = "monkey";
+        db.edit(superheroTest4, newName,"","",0,"",2.2);
+        assertEquals(newName, superheroTest4.getName());
+        assertEquals("kat", superheroTest4.getRealName());
+
     }
 }

@@ -11,7 +11,7 @@ public class UserInterface {
         //menu input
         Scanner keyboard = new Scanner(System.in);
         int menuInput;
-        Database database = new Database();
+        Controller controller = new Controller();
 
         //programloop
         do {
@@ -58,18 +58,18 @@ public class UserInterface {
                     }
                     strength = keyboard.nextDouble();
 
-                    database.addSuperhero(superName, realName, superpower, birthYear, isHuman, strength);
+                    controller.addSuperhero(superName, realName, superpower, birthYear, isHuman, strength);
 
-                    System.out.println(database.searchSuperhero(superName) + " blev oprettet");
+                    System.out.println(controller.searchSuperhero(superName) + " blev oprettet");
 
                     break;
                 case 2: //search for superhero
                     System.out.println("søg efter en superhelt: ");
                     String singleSearchInput = keyboard.next();
-                    Superhero result = database.searchSuperhero(singleSearchInput);
+                    Superhero result = controller.searchSuperhero(singleSearchInput);
                     if (result != null) {
                         System.out.println("Søgning: ");
-                        database.superheroInfo(result);
+                        System.out.println(controller.superheroInfo(result));
                     }else {
                         System.out.println("Superhelten blev ikke fundet");
                     }
@@ -77,17 +77,16 @@ public class UserInterface {
                 case 3: //search multiple superheroes
                     System.out.println("søg efter flere superhelte: ");
                     String searchInput = keyboard.next();
-                    System.out.println(database.searchSuperheroMultiple(searchInput));
+                    System.out.println(controller.searchSuperheroMultiple(searchInput));
                     break;
                 case 4: //edit superhero
 
                     System.out.println("søg efter personen du ville redigere: ");
                     String editInput = keyboard.nextLine();
 
-                    ArrayList<Superhero> editSearchResult = database.searchSuperheroMultiple(editInput);
+                    ArrayList<Superhero> editSearchResult = controller.searchSuperheroMultiple(editInput);
 
                     Superhero superheroToBeEdited = null;
-                    String name = null;
                     if (editSearchResult.isEmpty()) {
                         System.out.println("Superhelt blev ik fundet");
 
@@ -111,7 +110,7 @@ public class UserInterface {
 
                             try {
                                 choice = Integer.parseInt(choiceInput);
-                                if (choice >=1 && choice <= database.superheroList.size()) {
+                                if (choice >=1 && choice <= controller.getSuperheroList().size()) {
                                     break;
                                 } else{
                                     System.out.println("Ugyldig valg");
@@ -166,33 +165,40 @@ public class UserInterface {
                             }else if (!inputIsHuman.isEmpty()) {
                                 System.out.println("Du skal skrive (Ja/Nej)");
                             }
-                        } while (!inputIsHuman.toLowerCase().equals("ja") && !inputIsHuman.toLowerCase().equals("nej") && !inputIsHuman.isEmpty());
+                        } while (!inputIsHuman.toLowerCase().equals("ja") && !inputIsHuman.toLowerCase().equals("nej") && !inputIsHuman.isBlank());
 
-                        System.out.println("Styrke: ");
-                        String inputStrength = keyboard.nextLine();
+                        System.out.println("Styrke: " + superheroToBeEdited.getStrength());
                         double editStrength = 0;
                         while (true){
+                            String inputStrength = keyboard.nextLine();
                             try{
                                 if (!inputStrength.isEmpty()){
                                     editStrength = Double.parseDouble(inputStrength);
-                                    break;
                                 }
+                                break;
                             }catch (NumberFormatException numberFormatException){
                                 System.out.println("Du skal skrive et tal!");
                             }
                         }
-                        database.edit(superheroToBeEdited, editName, editRealName, editSuperpower, editBirthYear, editIsHuman, editStrength);
-                        database.superheroInfo(superheroToBeEdited);
-                        System.out.println("Superhelten er redigeret");
+
+
+                        //if no input
+                        if (editName.isEmpty() && editRealName.isEmpty() && editSuperpower.isEmpty() && editBirthYear == 0 && editIsHuman == null && editStrength == 0){
+                            System.out.println("Superhelten blev ikke redigeret");
+                            break;
+                        } else{
+                            controller.edit(superheroToBeEdited, editName, editRealName, editSuperpower, editBirthYear, editIsHuman, editStrength);
+                            System.out.println(controller.superheroInfo(superheroToBeEdited));
+                            System.out.println("Superhelten er redigeret");
+                        }
                     }
-
-
 
                     break;
                 case 5: //delete superhero
                     System.out.println("Skriv navnet på helten du vil slette: ");
+                    keyboard.nextLine(); //scanner bug håndtering.
                     String superheroToDelete = keyboard.nextLine();
-                    database.deleteSuperhero(superheroToDelete);
+                    controller.deleteSuperhero(superheroToDelete);
                     break;
             }
 

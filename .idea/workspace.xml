@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +106,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DatabaseTest.editSuperhero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperheroTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DatabaseTest" />
+      <option name="METHOD_NAME" value="editSuperhero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DatabaseTest.searchSuperhero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SuperheroTest" />
       <extension name="coverage">
@@ -123,6 +141,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DatabaseTest.editSuperhero" />
         <item itemvalue="JUnit.DatabaseTest.deleteSuperhero" />
         <item itemvalue="JUnit.DatabaseTest.searchSuperhero" />
         <item itemvalue="JUnit.DatabaseTest.addSuperhero" />
@@ -139,7 +158,7 @@
       <updated>1695127105520</updated>
       <workItem from="1695127106541" duration="10010000" />
       <workItem from="1698675498166" duration="3324000" />
-      <workItem from="1698755361893" duration="6435000" />
+      <workItem from="1698755361893" duration="12299000" />
     </task>
     <task id="LOCAL-00001" summary="added test">
       <option name="closed" value="true" />
@@ -205,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698677049499</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Refactoring">
+      <option name="closed" value="true" />
+      <created>1698910873007</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698910873007</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,8 +243,8 @@
     <MESSAGE value="added deleteSuperhero&#10;added unitTest for deleSuperhero&#10;added UserInterface" />
     <MESSAGE value="minor update" />
     <MESSAGE value="minor changes and comments added" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="Changes by soren" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by soren" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
 </project>

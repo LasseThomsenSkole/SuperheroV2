@@ -1,12 +1,9 @@
 package org.example;
 import java.util.ArrayList;
 import java.util.Objects;
-import java.util.Scanner;
 
 public class Database {
-    ArrayList<Superhero> superheroList;
-    Scanner keyboard = new Scanner(System.in);
-    Superhero superheroToBeEdited = null;
+    private ArrayList<Superhero> superheroList;
 
     public Database() {
 
@@ -24,20 +21,14 @@ public class Database {
     }
 
     public void addSuperhero(String superName, String realName, String superpower, int birthYear,String isHuman, double strength) {
-
         //add superhelten til arrayListen
         superheroList.add(new Superhero(superName, realName, superpower, birthYear, isHuman, strength));
-
-
-
 
     }
 
     public Superhero searchSuperhero(String searchInput) {
 
         ArrayList<String> heroes = new ArrayList<>();
-
-
 
         //foreach loop som sammenligner søgning med superheroes på superheroList
         for (Superhero superhero : superheroList) {
@@ -83,41 +74,49 @@ public class Database {
             if (!superpower.isEmpty()) {
                 superheroToBeEdited.setSuperPower(superpower);
             }
-
-            //System.out.println("Fødselsår: " + superheroToBeEdited.getYearCreated());
             if (!(birthYear == 0)){
                 superheroToBeEdited.setYearCreated(birthYear);
             }
-
-
-            //System.out.println("Er superhelten menneske? " + superheroToBeEdited.getIsHuman());
-
-            if(!isHuman.isEmpty()){
+            if(!(isHuman == null)){
                 superheroToBeEdited.setIsHuman(isHuman);
             }
-
-            //System.out.println("Superheltens styrketal: " + superheroToBeEdited.getStrength());
             if(!(strength == 0)){
                 superheroToBeEdited.setStrength(strength);
             }
 
         }
     }
-
-    public void superheroInfo(Superhero superhero) {
+    public String superheroInfo(Superhero superhero) {
         System.out.println("Superheltens navn: " + superhero.getName());
         if (superhero.getRealName() != null) {
-            System.out.println("Superheltens rigtige navn: " + superhero.getRealName());
+            return  "Superheltens navn: " + superhero.getName()
+                    + "\n"
+                    + "Superheltens rigtige navn: " + superhero.getRealName()
+                    + "\n"
+                    + "Superheltens superkræft: " + superhero.getSuperPower()
+                    + "\n"
+                    + "Superheltens fødselsår: " + superhero.getYearCreated()
+                    + "\n"
+                    + "Er superhelten menneske?  " + superhero.getIsHuman()
+                    + "\n"
+                    + "Superheltens styrke:  " + superhero.getStrength()
+                    + "\n";
+        }else {
+            return  "Superheltens navn: " + superhero.getName()
+                    + "\n"
+                    + "Superheltens superkræft: " + superhero.getSuperPower()
+                    + "\n"
+                    + "Superheltens fødselsår: " + superhero.getYearCreated()
+                    + "\n"
+                    + "Er superhelten menneske?  " + superhero.getIsHuman()
+                    + "\n"
+                    + "Superheltens styrke:  " + superhero.getStrength()
+                    + "\n";
         }
-        System.out.println("Superheltens superkræft: " + superhero.getSuperPower());
-        System.out.println("Superheltens fødselsår: " + superhero.getYearCreated());
-        System.out.println("Er superhelten menneske?  " + superhero.getIsHuman());
-        System.out.println("Superheltens styrke:  " + superhero.getStrength());
     }
 
     public void deleteSuperhero(String name) {
         superheroList.removeIf(superhero -> Objects.equals(superhero.getName(), name));
-
     }
 
     public ArrayList<Superhero> getSuperheroList() {

@@ -40,7 +40,7 @@ public class Controller {
         db.saveData();
     }
     public void loadData(){
-        db.loadData();
+        //db.loadData();
     }
 
 }

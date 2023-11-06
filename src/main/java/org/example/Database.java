@@ -133,6 +133,10 @@ public class Database {
         return superheroList;
     }
 
+    public void loadData(){
+        superheroList = fileHandler.loadData();
+    }
+
     public void saveData(){
         fileHandler.saveData(superheroList);
     }

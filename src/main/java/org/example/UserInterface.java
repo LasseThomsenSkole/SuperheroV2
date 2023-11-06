@@ -39,7 +39,7 @@ public class UserInterface {
                     String superName = keyboard.next();
 
                     System.out.println("Indtast rigtige navn");
-                    String realName = keyboard.next();
+                    String realName  = keyboard.nextLine();
 
                     System.out.println("Indtast superkræft");
                     String superpower = keyboard.next();

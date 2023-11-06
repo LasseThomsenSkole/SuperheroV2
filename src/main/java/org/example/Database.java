@@ -136,12 +136,5 @@ public class Database {
         }
     }
 
-    public void loadData(){
-        try {
-            Scanner scan = new Scanner(file);
-        } catch (FileNotFoundException e) {
-            System.out.println("fil ikke fundet");
-        }
-    }
 }
 

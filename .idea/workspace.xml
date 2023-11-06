@@ -4,18 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="Added Controller, Fixed edit method, Added UnitTest for edit method, remade superheroInfo method">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="Debugger and save/load data Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
-    </list>
-    <list id="574a7f96-0725-4e4b-97a1-4d4309134d49" name="Changes by lasse" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
     </list>
-    <list id="cf9e93b5-a4b1-4c6b-9c48-978888a1df79" name="Changes by soren" comment="">
+    <list id="574a7f96-0725-4e4b-97a1-4d4309134d49" name="Changes by lasse" comment="Changes by lasse">
+      <change beforePath="$PROJECT_DIR$/SuperheroData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SuperheroData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Superhero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" afterDir="false" />
+    </list>
+    <list id="cf9e93b5-a4b1-4c6b-9c48-978888a1df79" name="Changes by soren" comment="Changes by soren">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +40,44 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java">
       <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="cf9e93b5-a4b1-4c6b-9c48-978888a1df79" />
-        <range start1="12" end1="13" start2="13" end2="14" changelist="cf9e93b5-a4b1-4c6b-9c48-978888a1df79" />
-        <range start1="17" end1="19" start2="18" end2="35" changelist="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" />
-        <range start1="208" end1="208" start2="224" end2="230" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="25" end1="25" start2="25" end2="26" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="38" end1="39" start2="39" end2="40" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="41" end1="42" start2="42" end2="43" changelist="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" />
+        <range start1="44" end1="45" start2="45" end2="46" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="76" end1="77" start2="77" end2="83" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="228" end1="229" start2="234" end2="235" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/example/Controller.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="7" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="10" end1="10" start2="11" end2="14" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="38" end1="39" start2="42" end2="43" changelist="cf9e93b5-a4b1-4c6b-9c48-978888a1df79" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java">
+      <ranges>
+        <range start1="48" end1="49" start2="48" end2="49" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="51" end1="52" start2="51" end2="52" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="56" end1="56" start2="56" end2="61" changelist="cf9e93b5-a4b1-4c6b-9c48-978888a1df79" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/example/Database.java">
+      <ranges>
+        <range start1="11" end1="11" start2="11" end2="13" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="26" end1="27" start2="28" end2="29" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="30" end1="30" start2="32" end2="37" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="66" end1="67" start2="73" end2="74" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="79" end1="80" start2="86" end2="87" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="82" end1="83" start2="89" end2="90" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="85" end1="86" start2="92" end2="93" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="91" end1="91" start2="98" end2="99" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="92" end1="93" start2="100" end2="100" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="94" end1="95" start2="101" end2="102" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="106" end1="108" start2="113" end2="115" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="123" end1="123" start2="130" end2="131" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="128" end1="137" start2="136" end2="139" changelist="574a7f96-0725-4e4b-97a1-4d4309134d49" />
+        <range start1="138" end1="145" start2="140" end2="140" changelist="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" />
       </ranges>
     </file>
   </component>
@@ -257,7 +295,31 @@
       <option name="project" value="LOCAL" />
       <updated>1698947780923</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Debugger and save/load data Commit">
+      <option name="closed" value="true" />
+      <created>1699274999707</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699274999707</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Changes by lasse">
+      <option name="closed" value="true" />
+      <created>1699275034135</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699275034135</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes by soren">
+      <option name="closed" value="true" />
+      <created>1699275044063</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1699275044063</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,10 +330,12 @@
     <MESSAGE value="added deleteSuperhero&#10;added unitTest for deleSuperhero&#10;added UserInterface" />
     <MESSAGE value="minor update" />
     <MESSAGE value="minor changes and comments added" />
-    <MESSAGE value="Changes by soren" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Added Controller, Fixed edit method, Added UnitTest for edit method." />
     <MESSAGE value="Added Controller, Fixed edit method, Added UnitTest for edit method, remade superheroInfo method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Controller, Fixed edit method, Added UnitTest for edit method, remade superheroInfo method" />
+    <MESSAGE value="Changes by lasse" />
+    <MESSAGE value="Debugger and save/load data Commit" />
+    <MESSAGE value="Changes by soren" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by soren" />
   </component>
 </project>

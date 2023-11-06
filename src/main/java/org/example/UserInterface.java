@@ -15,8 +15,23 @@ public class UserInterface {
 
         //programloop
         do {
-            System.out.println("1. opret 2. find en helt 3. find flere helte 4. Rediger en superhelt 5. Slet en superhelt 9. afslut");
-            menuInput = keyboard.nextInt();
+            System.out.println("""
+                        1. opret
+                        2. find en helt
+                        3. find flere helte
+                        4. Rediger en superhelt
+                        5. Slet en superhelt
+                        6. Save en den aktuelle file
+                        9. afslut
+                        """);
+            try {
+                menuInput = keyboard.nextInt();
+                keyboard.nextLine();
+
+            } catch (InputMismatchException e) {
+                System.out.println("Fejl, tast et tal fra menuen");
+                keyboard.nextLine();
+            }
             switch (menuInput) {
                 case 1: //add superhero
                     System.out.println("Indtast kaldenavn");

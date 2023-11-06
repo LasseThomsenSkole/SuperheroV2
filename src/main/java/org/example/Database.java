@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class Database {
     private ArrayList<Superhero> superheroList;
     private File file = new File("SuperheroData.csv");
+    FileHandler fileHandler = new FileHandler();
+
     public Database() {
 
         superheroList = new ArrayList<>();
@@ -24,10 +26,15 @@ public class Database {
 
     }
 
-    public void addSuperhero(String superName, String realName, String superpower, int birthYear,String isHuman, double strength) {
+    public void addSuperhero(String superName, String realName, String superpower, int birthYear, String isHuman, double strength) {
         //add superhelten til arrayListen
         superheroList.add(new Superhero(superName, realName, superpower, birthYear, isHuman, strength));
 
+    }
+
+    public void addSuperhero(String superName, String superpower, int birthYear, String isHuman, double strength) {
+        //add superhelten til arrayListen
+        superheroList.add(new Superhero(superName, superpower, birthYear, isHuman, strength));
     }
 
     public Superhero searchSuperhero(String searchInput) {
@@ -64,7 +71,7 @@ public class Database {
     }
 
 
-    public void edit(Superhero superheroToBeEdited, String name, String realName,String superpower, int birthYear, String isHuman, double strength) {
+    public void edit(Superhero superheroToBeEdited, String name, String realName, String superpower, int birthYear, String isHuman, double strength) {
         // if name is empty then don't set.
         if (superheroToBeEdited != null) {
 
@@ -77,22 +84,22 @@ public class Database {
             if (!superpower.isEmpty()) {
                 superheroToBeEdited.setSuperPower(superpower);
             }
-            if (!(birthYear == 0)){
+            if (!(birthYear == 0)) {
                 superheroToBeEdited.setYearCreated(birthYear);
             }
-            if(!(isHuman == null)){
+            if (!(isHuman == null)) {
                 superheroToBeEdited.setIsHuman(isHuman);
             }
-            if(!(strength == 0)){
+            if (!(strength == 0)) {
                 superheroToBeEdited.setStrength(strength);
             }
 
         }
     }
+
     public String superheroInfo(Superhero superhero) {
-        System.out.println("Superheltens navn: " + superhero.getName());
         if (superhero.getRealName() != null) {
-            return  "Superheltens navn: " + superhero.getName()
+            return "Superheltens navn: " + superhero.getName()
                     + "\n"
                     + "Superheltens rigtige navn: " + superhero.getRealName()
                     + "\n"
@@ -104,8 +111,8 @@ public class Database {
                     + "\n"
                     + "Superheltens styrke:  " + superhero.getStrength()
                     + "\n";
-        }else {
-            return  "Superheltens navn: " + superhero.getName()
+        } else {
+            return "Superheltens navn: " + superhero.getName()
                     + "\n"
                     + "Superheltens superkræft: " + superhero.getSuperPower()
                     + "\n"
@@ -121,20 +128,15 @@ public class Database {
     public void deleteSuperhero(String name) {
         superheroList.removeIf(superhero -> Objects.equals(superhero.getName(), name));
     }
+
     public ArrayList<Superhero> getSuperheroList() {
         return superheroList;
     }
 
     public void saveData(){
-        try{
-            PrintStream printStream = new PrintStream(file);
-            for (Superhero superhero:superheroList) {
-                printStream.print(superhero);
-            }
-        }catch (FileNotFoundException e) {
-            System.out.println("fil ikke fundet");
-        }
+        fileHandler.saveData(superheroList);
     }
+
 
 }
 

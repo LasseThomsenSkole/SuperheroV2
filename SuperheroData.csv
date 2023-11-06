@@ -1,4 +1,4 @@
-Superhero{name='abe', realName='kat', superPower='kaste bananer', yearCreated=2003, isHuman=nej, strength=12.1}
-Superhero{name='troldmand', realName='john', superPower='kaste ild', yearCreated=225, isHuman=ja, strength=9001.0}
-Superhero{name='supermand', superPower='kaste frost', yearCreated=2000, isHuman=nej, strength=12.1}
-Superhero{name='Severius', realName='Søren', superPower='Slange', yearCreated=1666, isHuman=er ikke menneske, strength=9001.0}
+abe;kat;kaste bananer;2003;nej;12.1
+troldmand;john;kaste ild;225;ja;9001.0
+supermand;null;kaste frost;2000;nej;12.1;
+Tine;Tine;Datamatik;1910;er menneske;1.0

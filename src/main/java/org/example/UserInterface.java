@@ -23,6 +23,7 @@ public class UserInterface {
                         4. Rediger en superhelt
                         5. Slet en superhelt
                         6. Save en den aktuelle file
+                        7. Load data fra filen
                         9. afslut
                         """);
             try {
@@ -36,13 +37,13 @@ public class UserInterface {
             switch (menuInput) {
                 case 1: //add superhero
                     System.out.println("Indtast kaldenavn");
-                    String superName = keyboard.next();
+                    String superName = keyboard.nextLine();
 
                     System.out.println("Indtast rigtige navn");
                     String realName  = keyboard.nextLine();
 
                     System.out.println("Indtast superkræft");
-                    String superpower = keyboard.next();
+                    String superpower = keyboard.nextLine();
 
                     System.out.println("Indtast fødselsår");
                     //Input mismatch håndtering
@@ -74,7 +75,12 @@ public class UserInterface {
                     }
                     strength = keyboard.nextDouble();
 
-                    controller.addSuperhero(superName, realName, superpower, birthYear, isHuman, strength);
+                    if (realName.isEmpty()) {
+                        controller.addSuperhero(superName, null, superpower, birthYear, isHuman, strength);
+                    } else{
+                        controller.addSuperhero(superName, realName, superpower, birthYear, isHuman, strength);
+                    }
+
 
                     System.out.println(controller.searchSuperhero(superName) + " blev oprettet");
 
@@ -226,7 +232,7 @@ public class UserInterface {
                 case 6: //save superherolist
                     controller.saveData();
                     break;
-                case 7: //load superherolist
+                case 7: //load SuperheroData.csv
                     controller.loadData();
             }
 

@@ -32,5 +32,11 @@ public class Controller {
     public ArrayList<Superhero> getSuperheroList(){
         return db.getSuperheroList();
     }
+    public void saveData(){
+        db.saveData();
+    }
+    public void loadData(){
+        db.loadData();
+    }
 
 }

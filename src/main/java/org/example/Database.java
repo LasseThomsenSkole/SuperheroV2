@@ -1,10 +1,14 @@
 package org.example;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Database {
     private ArrayList<Superhero> superheroList;
-
+    private File file = new File("SuperheroData.csv");
     public Database() {
 
         superheroList = new ArrayList<>();
@@ -117,9 +121,27 @@ public class Database {
     public void deleteSuperhero(String name) {
         superheroList.removeIf(superhero -> Objects.equals(superhero.getName(), name));
     }
-
     public ArrayList<Superhero> getSuperheroList() {
         return superheroList;
+    }
+
+    public void saveData(){
+        try{
+            PrintStream printStream = new PrintStream(file);
+            for (Superhero superhero:superheroList) {
+                printStream.print(superhero);
+            }
+        }catch (FileNotFoundException e) {
+            System.out.println("fil ikke fundet");
+        }
+    }
+
+    public void loadData(){
+        try {
+            Scanner scan = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            System.out.println("fil ikke fundet");
+        }
     }
 }
 

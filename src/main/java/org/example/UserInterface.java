@@ -221,6 +221,12 @@ public class UserInterface {
                     String superheroToDelete = keyboard.nextLine();
                     controller.deleteSuperhero(superheroToDelete);
                     break;
+
+                case 6: //save superherolist
+                    controller.saveData();
+                    break;
+                case 7: //load superherolist
+                    controller.loadData();
             }
 
         } while (!(menuInput ==9));}    //tryk 9 for afslut

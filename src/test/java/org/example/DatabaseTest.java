@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DatabaseTest {
     Database db;
-    Superhero superheroTest4 = new Superhero("abe", "kat", "kaste bananer", 2003, "nej", 12.1);
 
     @BeforeEach
     void setUp() {
@@ -48,6 +47,7 @@ class DatabaseTest {
     }
     @Test
     void editSuperhero(){
+        Superhero superheroTest4 = new Superhero("abe", "kat", "kaste bananer", 2003, "nej", 12.1);
         String newName = "monkey";
         db.edit(superheroTest4, newName,"","",0,"",2.2);
         assertEquals(newName, superheroTest4.getName());

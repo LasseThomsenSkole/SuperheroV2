@@ -105,7 +105,7 @@ public class UserInterface {
                         }
                         int choice;
 
-                        while (true) {
+                        while (true) { //loop for the userchoice of superheroes
                             String choiceInput = keyboard.nextLine();
 
                             try {
@@ -120,6 +120,7 @@ public class UserInterface {
                             }
 
                         }
+
                         superheroToBeEdited = editSearchResult.get(choice - 1);
                     } else {
                         superheroToBeEdited = editSearchResult.get(0); //den første i arraylisten
@@ -127,15 +128,19 @@ public class UserInterface {
                     if (superheroToBeEdited != null) {
                         System.out.println("Rediger superhelt. Tryk Enter hvis du ikke ville ændre værdien.");
 
+                        //name
                         System.out.println("Navn: " + superheroToBeEdited.getName());
                         String editName = keyboard.nextLine();
 
+                        //real name
                         System.out.println("Rigtige navn: " + superheroToBeEdited.getRealName());
                         String editRealName = keyboard.nextLine();
 
+                        //superpower
                         System.out.println("Superkræft: " + superheroToBeEdited.getSuperPower());
                         String editSuperpower = keyboard.nextLine();
 
+                        //birth year
                         System.out.println("Fødselsår: " + superheroToBeEdited.getYearCreated());
                         int editBirthYear = 0;
                         while (true) {
@@ -150,7 +155,7 @@ public class UserInterface {
                             }
                         }
 
-
+                        //Is human ?
                         System.out.println("Er din superhelt et menneske? " + superheroToBeEdited.getIsHuman());
                         String editIsHuman = null;
                         String inputIsHuman;
@@ -167,6 +172,7 @@ public class UserInterface {
                             }
                         } while (!inputIsHuman.toLowerCase().equals("ja") && !inputIsHuman.toLowerCase().equals("nej") && !inputIsHuman.isBlank());
 
+                        //Strength
                         System.out.println("Styrke: " + superheroToBeEdited.getStrength());
                         double editStrength = 0;
                         while (true){

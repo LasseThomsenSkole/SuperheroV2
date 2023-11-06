@@ -41,22 +41,21 @@ public class Database {
 
                 }
             }
+
         }
         return null;
     }
 
 
-    //søgning hvor flere resultater kommer tilbage
+    //search that can return more than 1 superhero
     public ArrayList<Superhero> searchSuperheroMultiple(String search) {
         ArrayList<Superhero> searchResult = new ArrayList<>();
 
-
         for (Superhero superhero : superheroList) {
-            if (superhero.getName().contains(search)) {
+            if (superhero.getName().contains(search)) { //if superheroName contains some of the chars in the search string
                 searchResult.add(superhero);
             }
         }
-        //System.out.println(searchResult);
         return searchResult;
     }
 

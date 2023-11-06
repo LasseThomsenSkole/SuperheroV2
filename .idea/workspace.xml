@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="Refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
+    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="Added Controller, Fixed edit method, Added UnitTest for edit method, remade superheroInfo method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" afterDir="false" />
@@ -158,7 +158,8 @@
       <updated>1695127105520</updated>
       <workItem from="1695127106541" duration="10010000" />
       <workItem from="1698675498166" duration="3324000" />
-      <workItem from="1698755361893" duration="12299000" />
+      <workItem from="1698755361893" duration="15108000" />
+      <workItem from="1699007798595" duration="969000" />
     </task>
     <task id="LOCAL-00001" summary="added test">
       <option name="closed" value="true" />
@@ -232,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698910873007</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added Controller, Fixed edit method, Added UnitTest for edit method, remade superheroInfo method">
+      <option name="closed" value="true" />
+      <created>1698947780923</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698947780923</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +254,8 @@
     <MESSAGE value="minor changes and comments added" />
     <MESSAGE value="Changes by soren" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Added Controller, Fixed edit method, Added UnitTest for edit method." />
+    <MESSAGE value="Added Controller, Fixed edit method, Added UnitTest for edit method, remade superheroInfo method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Controller, Fixed edit method, Added UnitTest for edit method, remade superheroInfo method" />
   </component>
 </project>

@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="Debugger and save/load data Commit fileHandler added" />
-    <list id="574a7f96-0725-4e4b-97a1-4d4309134d49" name="Changes by lasse" comment="Changes by lasse" />
-    <list id="cf9e93b5-a4b1-4c6b-9c48-978888a1df79" name="Changes by soren" comment="Changes by soren">
+    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="Debugger and save/load data Commit fileHandler added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" afterDir="false" />
     </list>
+    <list id="574a7f96-0725-4e4b-97a1-4d4309134d49" name="Changes by lasse" comment="Changes by lasse" />
+    <list id="8e89067b-6d3f-4528-8d86-0dbbc2a8551a" name="Changes by Severius" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
+    </list>
+    <list id="cf9e93b5-a4b1-4c6b-9c48-978888a1df79" name="Changes by soren" comment="Changes by soren" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +32,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java">
+      <ranges>
+        <range start1="15" end1="16" start2="15" end2="17" changelist="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" />
+        <range start1="26" end1="26" start2="27" end2="28" changelist="8e89067b-6d3f-4528-8d86-0dbbc2a8551a" />
+        <range start1="236" end1="236" start2="238" end2="254" changelist="8e89067b-6d3f-4528-8d86-0dbbc2a8551a" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -241,47 +256,7 @@
       <option name="project" value="LOCAL" />
       <updated>1698947780923</updated>
     </task>
-    <task id="LOCAL-00011" summary="Debugger and save/load data Commit">
-      <option name="closed" value="true" />
-      <created>1699274999707</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1699274999707</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Changes by lasse">
-      <option name="closed" value="true" />
-      <created>1699275034135</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1699275034135</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Changes by soren">
-      <option name="closed" value="true" />
-      <created>1699275044063</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1699275044063</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Debugger and save/load data Commit fileHandler added">
-      <option name="closed" value="true" />
-      <created>1699280991578</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1699280991578</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Changes by lasse">
-      <option name="closed" value="true" />
-      <created>1699281019278</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1699281019278</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,13 +267,10 @@
     <MESSAGE value="added deleteSuperhero&#10;added unitTest for deleSuperhero&#10;added UserInterface" />
     <MESSAGE value="minor update" />
     <MESSAGE value="minor changes and comments added" />
+    <MESSAGE value="Changes by soren" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Added Controller, Fixed edit method, Added UnitTest for edit method." />
     <MESSAGE value="Added Controller, Fixed edit method, Added UnitTest for edit method, remade superheroInfo method" />
-    <MESSAGE value="Debugger and save/load data Commit" />
-    <MESSAGE value="Changes by lasse" />
-    <MESSAGE value="Debugger and save/load data Commit fileHandler added" />
-    <MESSAGE value="Changes by soren" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by soren" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Controller, Fixed edit method, Added UnitTest for edit method, remade superheroInfo method" />
   </component>
 </project>

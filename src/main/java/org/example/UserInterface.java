@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -13,7 +14,8 @@ public class UserInterface {
         Scanner keyboard = new Scanner(System.in);
         int menuInput = 0;
         Controller controller = new Controller();
-
+        //
+        controller.loadData();
         //programloop
         do {
             System.out.println("""

@@ -9,9 +9,6 @@ public class Controller {
     public void addSuperhero(String superName, String realName, String superpower, int birthYear,String isHuman, double strength){
         db.addSuperhero(superName,realName,superpower,birthYear,isHuman,strength);
     }
-    public void addSuperhero(String superName, String superpower, int birthYear,String isHuman, double strength){
-        db.addSuperhero(superName,superpower,birthYear,isHuman,strength);
-    }
 
     public Superhero searchSuperhero(String searchInput){
         return db.searchSuperhero(searchInput);
@@ -40,7 +37,7 @@ public class Controller {
         db.saveData();
     }
     public void loadData(){
-        //db.loadData();
+        db.loadData();
     }
 
 }

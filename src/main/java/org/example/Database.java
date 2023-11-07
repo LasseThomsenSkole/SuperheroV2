@@ -32,11 +32,7 @@ public class Database {
 
     }
 
-    public void addSuperhero(String superName, String superpower, int birthYear, String isHuman, double strength) {
-        //add superhelten til arrayListen
-        superheroList.add(new Superhero(superName, superpower, birthYear, isHuman, strength));
-    }
-
+    //Search for the one superhero by input
     public Superhero searchSuperhero(String searchInput) {
 
         ArrayList<String> heroes = new ArrayList<>();
@@ -137,10 +133,10 @@ public class Database {
         superheroList = fileHandler.loadData();
     }
 
+    //Save the new superheroes from the program into the file
     public void saveData(){
         fileHandler.saveData(superheroList);
     }
-
 
 }
 

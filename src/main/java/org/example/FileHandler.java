@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileHandler {
-    private final String FILE_NAME = "SuperheroData.csv";
+    private String FILE_NAME = "SuperheroData.csv";
 
-    private final File file = new File(FILE_NAME);
+    private File file = new File(FILE_NAME);
     public ArrayList<Superhero> loadData(){
         ArrayList<Superhero> tempSuperhero = new ArrayList<>();
-        Scanner scan = null;
+        Scanner scan;
         try {
             scan = new Scanner(file);
         } catch (FileNotFoundException e) {

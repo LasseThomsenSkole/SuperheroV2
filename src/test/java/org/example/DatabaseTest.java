@@ -3,17 +3,26 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class DatabaseTest {
     Database db;
-
+    FileHandler fileHandler = new FileHandler();
+    ArrayList<Superhero> testList = new ArrayList<>();
     @BeforeEach
     void setUp() {
         db = new Database();
         Superhero superheroTest = new Superhero("abe", "kat", "kaste bananer", 2003, "nej", 12.1);
         Superhero superheroTest2 = new Superhero("troldmand", "john", "kaste ild", 225, "ja", 9001);
         Superhero superheroTest3 = new Superhero("supermand", "kaste frost", 2000, "nej", 12.1);
+        testList.add(superheroTest);
+        testList.add(superheroTest2);
+        testList.add(superheroTest3);
     }
 
     @Test
@@ -54,7 +63,26 @@ class DatabaseTest {
         assertEquals("kat", superheroTest4.getRealName());
 
     }
+    @Test
+    void saveSuperhero(){ //TODO make a parameter for the saveData method
+        File file = new File("TestSuperheroData.csv");
+        try {
+            PrintStream printStream = new PrintStream(file);
+            for (Superhero superhero:testList) {
+                printStream.print(fileHandler.toCsv(superhero));
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("fil ikke fundet");
+        }
 
+    }
+    @Test
+    void sortByName(){
+        ArrayList<Superhero> sorted = db.sortByName();
+        String actualName = sorted.get(0).getName();
+        String expectedName = "abe";
+        assertEquals(actualName,expectedName);
+    }
 
 
 }

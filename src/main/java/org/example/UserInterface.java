@@ -233,7 +233,7 @@ public class UserInterface {
                     break;
 
                 case 6: //save superherolist
-                    controller.saveData();
+                    controller.saveData(controller.getSuperheroList());
                     break;
                 case 7: //load SuperheroData.csv
                     controller.loadData();
@@ -295,7 +295,7 @@ public class UserInterface {
                     }
 
                 case 10: //afslut
-                    controller.saveData();
+                    controller.saveData(controller.getSuperheroList());
             }
 
         } while (!(menuInput ==10));}    //tryk 9 for afslut

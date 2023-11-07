@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="Only persist if the file havent been saved. bug fixes and sort method">
+    <list default="true" id="ce89fe43-0e6c-4ff2-be86-f0610c8c9a59" name="Changes" comment="sort methods added">
+      <change afterPath="$PROJECT_DIR$/TestSuperheroData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperheroData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SuperheroData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DatabaseTest.java" afterDir="false" />
     </list>
     <list id="574a7f96-0725-4e4b-97a1-4d4309134d49" name="Changes by lasse" comment="Changes by lasse" />
     <list id="8e89067b-6d3f-4528-8d86-0dbbc2a8551a" name="Changes by Severius" comment="Changes by Severius" />
@@ -64,7 +65,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DatabaseTest.sortByName">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="SuperheroTest" />
@@ -94,22 +95,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatabaseTest.deleteSuperhero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SuperheroTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DatabaseTest" />
-      <option name="METHOD_NAME" value="deleteSuperhero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DatabaseTest.editSuperhero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SuperheroTest" />
       <extension name="coverage">
@@ -126,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatabaseTest.searchSuperhero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DatabaseTest.saveSuperhero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SuperheroTest" />
       <extension name="coverage">
         <pattern>
@@ -136,7 +121,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DatabaseTest" />
-      <option name="METHOD_NAME" value="searchSuperhero" />
+      <option name="METHOD_NAME" value="saveSuperhero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest.sortByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperheroTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DatabaseTest" />
+      <option name="METHOD_NAME" value="sortByName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DatabaseTest.sortByName" />
+        <item itemvalue="JUnit.DatabaseTest.saveSuperhero" />
+        <item itemvalue="JUnit.DatabaseTest.addSuperhero" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DatabaseTest.editSuperhero" />
-        <item itemvalue="JUnit.DatabaseTest.deleteSuperhero" />
-        <item itemvalue="JUnit.DatabaseTest.searchSuperhero" />
-        <item itemvalue="JUnit.DatabaseTest.addSuperhero" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +270,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699361091979</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="sort methods added">
+      <option name="closed" value="true" />
+      <created>1699365599921</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699365599921</updated>
+    </task>
+    <task id="LOCAL-00015" summary="sort methods added">
+      <option name="closed" value="true" />
+      <created>1699365610858</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1699365610858</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +303,7 @@
     <MESSAGE value="Added Controller, Fixed edit method, Added UnitTest for edit method, remade superheroInfo method" />
     <MESSAGE value="Changes by Severius" />
     <MESSAGE value="Only persist if the file havent been saved. bug fixes and sort method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Only persist if the file havent been saved. bug fixes and sort method" />
+    <MESSAGE value="sort methods added" />
+    <option name="LAST_COMMIT_MESSAGE" value="sort methods added" />
   </component>
 </project>

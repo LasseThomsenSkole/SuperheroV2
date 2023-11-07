@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Database {
     private ArrayList<Superhero> superheroList;
-    private File file = new File("SuperheroData.csv");
+    //private final File file = new File("SuperheroData.csv");
     FileHandler fileHandler = new FileHandler();
 
     //Superheroes which are already on the list
@@ -135,11 +135,12 @@ public class Database {
     }
 
     //Save the new superheroes from the program into the file
-    public void saveData(){
+    public void saveData(ArrayList<Superhero> superheroList){
         fileHandler.saveData(superheroList);
     }
 
     //Sort methods
+    //TODO LAV PARAMETER
     public ArrayList<Superhero> sortByName(){
         ArrayList<Superhero> sortedList = new ArrayList<>();
         sortedList.addAll(superheroList);

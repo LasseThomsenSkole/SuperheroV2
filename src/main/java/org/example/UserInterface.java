@@ -26,7 +26,9 @@ public class UserInterface {
                         5. Slet en superhelt
                         6. Save en den aktuelle file
                         7. Load data fra filen
-                        9. afslut
+                        8. Udskriv hele Superhelt listen af superhelt
+                        9. Sortere Superhelt listen af input
+                        10. afslut
                         """);
             try {
                 menuInput = keyboard.nextInt();
@@ -236,9 +238,29 @@ public class UserInterface {
                     break;
                 case 7: //load SuperheroData.csv
                     controller.loadData();
+                    break;
+                case 8: //udskrive hele listen
+                    int count = 1;
+                    for (Superhero superhero : controller.getSuperheroList()) {
+                            System.out.println(count++ + ". " +
+                                    superhero.getName() + ", " +
+                                    superhero.getRealName() + ", " +
+                                    superhero.getSuperPower() + ", " +
+                                    superhero.getYearCreated() + ", " +
+                                    superhero.getIsHuman() + ", " +
+                                    superhero.getStrength() + ". "
+                            );
+                    }
+                    System.out.println();
+                    break;
+                case 9: //sortere
+                    Collections.sort(controller.getSuperheroList(), new NameComparator());
+
+                case 10: //afslut
+                    controller.saveData();
             }
 
-        } while (!(menuInput ==9));}    //tryk 9 for afslut
+        } while (!(menuInput ==10));}    //tryk 9 for afslut
 
 
 }

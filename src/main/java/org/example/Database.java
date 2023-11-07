@@ -11,6 +11,7 @@ public class Database {
     private File file = new File("SuperheroData.csv");
     FileHandler fileHandler = new FileHandler();
 
+    //Superheroes which are already on the list
     public Database() {
 
         superheroList = new ArrayList<>();
@@ -26,6 +27,7 @@ public class Database {
 
     }
 
+    //Add Superhero into the list
     public void addSuperhero(String superName, String realName, String superpower, int birthYear, String isHuman, double strength) {
         //add superhelten til arrayListen
         superheroList.add(new Superhero(superName, realName, superpower, birthYear, isHuman, strength));
@@ -53,8 +55,7 @@ public class Database {
         return null;
     }
 
-
-    //search that can return more than 1 superhero
+    //Search that can return more than 1 superhero
     public ArrayList<Superhero> searchSuperheroMultiple(String search) {
         ArrayList<Superhero> searchResult = new ArrayList<>();
 
@@ -66,7 +67,7 @@ public class Database {
         return searchResult;
     }
 
-
+    //Edit the superhero of choice
     public void edit(Superhero superheroToBeEdited, String name, String realName, String superpower, int birthYear, String isHuman, double strength) {
         // if name is empty then don't set.
         if (superheroToBeEdited != null) {
@@ -93,6 +94,7 @@ public class Database {
         }
     }
 
+    //Get the info of one superhero by real name
     public String superheroInfo(Superhero superhero) {
         if (superhero.getRealName() != null) {
             return "Superheltens navn: " + superhero.getName()
@@ -121,14 +123,17 @@ public class Database {
         }
     }
 
+    //Delete the superhero of choice
     public void deleteSuperhero(String name) {
         superheroList.removeIf(superhero -> Objects.equals(superhero.getName(), name));
     }
 
+    //Return the Arraylist
     public ArrayList<Superhero> getSuperheroList() {
         return superheroList;
     }
 
+    //load the file into the program
     public void loadData(){
         superheroList = fileHandler.loadData();
     }

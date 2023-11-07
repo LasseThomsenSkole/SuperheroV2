@@ -1,5 +1,8 @@
 package org.example;
+
 public class Superhero {
+
+    //Attributters
     private String name;
     private String superPower;
     private int yearCreated;
@@ -7,7 +10,7 @@ public class Superhero {
     private double strength;
     private String realName;
 
-
+    //Constructor with real name
     public Superhero(String name, String realName, String superPower, int yearCreated, String isHuman, double strength) {
         this.name = name;
         this.realName = realName;
@@ -17,6 +20,7 @@ public class Superhero {
         this.strength = strength;
     }
 
+    //Constructor without real name
     public Superhero(String name, String superPower, int yearCreated, String isHuman, double strength) {
         this.name = name;
         this.superPower = superPower;
@@ -25,6 +29,7 @@ public class Superhero {
         this.strength = strength;
     }
 
+    //Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -49,6 +54,7 @@ public class Superhero {
         this.realName = realName;
     }
 
+    //Getters
     public String getName() {
         return name;
     }
@@ -73,6 +79,7 @@ public class Superhero {
         return strength;
     }
 
+    //Output of superhero
     public String toString() {
         if (getRealName() == null){
             return "Superhero{" +

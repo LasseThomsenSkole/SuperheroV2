@@ -39,5 +39,8 @@ public class Controller {
     public void loadData(){
         db.loadData();
     }
+    /*public void sortData() {
+        //db.
+    }*/
 
 }

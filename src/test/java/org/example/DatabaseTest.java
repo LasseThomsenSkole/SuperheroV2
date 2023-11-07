@@ -85,5 +85,11 @@ class DatabaseTest {
         int expectedName = 225;
         assertEquals(actualBirthYear, expectedName);
     }
-
+    @Test
+    void sortByPrimarySecondary(){
+        ArrayList<Superhero> sorted = db.sortByPrimarySecondary(6,4);//Primary = strength, Secondary = yearCreated.
+        int actualYearCreated = sorted.get(0).getYearCreated(); //supermands yearCreated
+        int expectedName = 2000;
+        assertEquals(actualYearCreated, expectedName);
+    }
 }

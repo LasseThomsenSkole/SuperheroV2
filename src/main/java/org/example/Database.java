@@ -140,7 +140,6 @@ public class Database {
     }
 
     //Sort methods
-    //TODO LAV PARAMETER
     public ArrayList<Superhero> sortByName(){
         ArrayList<Superhero> sortedList = new ArrayList<>();
         sortedList.addAll(superheroList);

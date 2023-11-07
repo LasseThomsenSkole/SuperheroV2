@@ -73,22 +73,22 @@ class DatabaseTest {
     }
     @Test
     void sortByName(){
-        ArrayList<Superhero> sorted = db.sortByName();
+        ArrayList<Superhero> sorted = db.sortByName(testList);
         String actualName = sorted.get(0).getName();
         String expectedName = "abe";
         assertEquals(actualName, expectedName);
     }
     @Test
     void sortByBirthYear(){
-        ArrayList<Superhero> sorted = db.sortByBirthYear();
+        ArrayList<Superhero> sorted = db.sortByBirthYear(testList);
         int actualBirthYear = sorted.get(0).getYearCreated();
         int expectedName = 225;
         assertEquals(actualBirthYear, expectedName);
     }
     @Test
     void sortByPrimarySecondary(){
-        ArrayList<Superhero> sorted = db.sortByPrimarySecondary(6,4);//Primary = strength, Secondary = yearCreated.
-        int actualYearCreated = sorted.get(0).getYearCreated(); //supermands yearCreated
+        ArrayList<Superhero> sorted = db.sortByPrimarySecondary(6,4,testList);//Primary = strength, Secondary = yearCreated.
+        int actualYearCreated = sorted.get(0).getYearCreated(); //supermand's yearCreated
         int expectedName = 2000;
         assertEquals(actualYearCreated, expectedName);
     }

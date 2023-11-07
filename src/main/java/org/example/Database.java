@@ -140,44 +140,44 @@ public class Database {
     }
 
     //Sort methods
-    public ArrayList<Superhero> sortByName(){
+    public ArrayList<Superhero> sortByName(ArrayList<Superhero> superheroList){
         ArrayList<Superhero> sortedList = new ArrayList<>();
         sortedList.addAll(superheroList);
         Collections.sort(sortedList, new NameComparator());
         return sortedList;
     }
-    public ArrayList<Superhero> sortByRealName(){
+    public ArrayList<Superhero> sortByRealName(ArrayList<Superhero> superheroList){
         ArrayList<Superhero> sortedList = new ArrayList<>();
         sortedList.addAll(superheroList);
         Collections.sort(sortedList, new RealNameComparator());
         return sortedList;
     }
-    public ArrayList<Superhero> sortBySuperpower(){
+    public ArrayList<Superhero> sortBySuperpower(ArrayList<Superhero> superheroList){
         ArrayList<Superhero> sortedList = new ArrayList<>();
         sortedList.addAll(superheroList);
         Collections.sort(sortedList, new SuperPowerComparator());
         return sortedList;
     }
-    public ArrayList<Superhero> sortByBirthYear(){
+    public ArrayList<Superhero> sortByBirthYear(ArrayList<Superhero> superheroList){
         ArrayList<Superhero> sortedList = new ArrayList<>();
         sortedList.addAll(superheroList);
         Collections.sort(sortedList, new BirthYearComparator());
         return sortedList;
     }
-    public ArrayList<Superhero> sortByIsHuman(){
+    public ArrayList<Superhero> sortByIsHuman(ArrayList<Superhero> superheroList){
         ArrayList<Superhero> sortedList = new ArrayList<>();
         sortedList.addAll(superheroList);
         Collections.sort(sortedList, new IsHumanComparator());
         return sortedList;
     }
-    public ArrayList<Superhero> sortByStrength(){
+    public ArrayList<Superhero> sortByStrength(ArrayList<Superhero> superheroList){
         ArrayList<Superhero> sortedList = new ArrayList<>();
         sortedList.addAll(superheroList);
         Collections.sort(sortedList, new StrengthComparator());
         return sortedList;
     }
 
-    public ArrayList<Superhero> sortByPrimarySecondary(int a, int b){
+    public ArrayList<Superhero> sortByPrimarySecondary(int a, int b, ArrayList<Superhero> superheroList){
         ArrayList<Superhero> sortedList = new ArrayList<>();
         sortedList.addAll(superheroList);
 

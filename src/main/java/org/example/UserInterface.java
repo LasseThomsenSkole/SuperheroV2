@@ -264,12 +264,12 @@ public class UserInterface {
                                     """);
                     menuInput = keyboard.nextInt();
                     switch (menuInput){
-                        case 1 -> System.out.println(controller.sortByName());
-                        case 2 -> System.out.println(controller.sortByRealname());
-                        case 3 -> System.out.println(controller.sortBySuperpower());
-                        case 4 -> System.out.println(controller.sortByBirthYear());
-                        case 5 -> System.out.println(controller.sortByIsHuman());
-                        case 6 -> System.out.println(controller.sortByStrength());
+                        case 1 -> System.out.println(controller.sortByName(controller.getSuperheroList()));
+                        case 2 -> System.out.println(controller.sortByRealname(controller.getSuperheroList()));
+                        case 3 -> System.out.println(controller.sortBySuperpower(controller.getSuperheroList()));
+                        case 4 -> System.out.println(controller.sortByBirthYear(controller.getSuperheroList()));
+                        case 5 -> System.out.println(controller.sortByIsHuman(controller.getSuperheroList()));
+                        case 6 -> System.out.println(controller.sortByStrength(controller.getSuperheroList()));
                         case 7 -> {
                                 System.out.println("""
                                         Indtast de to ønskede tal til at sortere i primary og secondary.
@@ -284,7 +284,7 @@ public class UserInterface {
                                     int primary = keyboard.nextInt();
                                     System.out.println("vælg sekundær");
                                     int secondary = keyboard.nextInt();
-                                    System.out.println(controller.sortByPrimarySecondary(primary, secondary));
+                                    System.out.println(controller.sortByPrimarySecondary(primary, secondary,controller.getSuperheroList()));
                                 }catch (IllegalArgumentException illegalArgumentException){
                                     System.out.println("Du kan ikke vælge 2 af den samme");
                                 }catch (InputMismatchException inputMismatchException){

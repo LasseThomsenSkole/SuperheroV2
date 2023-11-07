@@ -39,28 +39,27 @@ public class Controller {
     public void loadData(){
         db.loadData();
     }
-   public ArrayList<Superhero> sortByName(){
-        return db.sortByName();
+   public ArrayList<Superhero> sortByName(ArrayList<Superhero> superheroList){
+        return db.sortByName(superheroList);
    }
-   public ArrayList<Superhero> sortByRealname(){
-        return db.sortByRealName();
+   public ArrayList<Superhero> sortByRealname(ArrayList<Superhero> superheroList){
+        return db.sortByRealName(superheroList);
    }
-   public ArrayList<Superhero> sortBySuperpower(){
-        return db.sortBySuperpower();
+   public ArrayList<Superhero> sortBySuperpower(ArrayList<Superhero> superheroList){
+        return db.sortBySuperpower(superheroList);
    }
-   public ArrayList<Superhero> sortByBirthYear(){
-        return db.sortByBirthYear();
+   public ArrayList<Superhero> sortByBirthYear(ArrayList<Superhero> superheroList){
+        return db.sortByBirthYear(superheroList);
    }
-   public ArrayList<Superhero> sortByIsHuman(){
-        return db.sortByIsHuman();
+   public ArrayList<Superhero> sortByIsHuman(ArrayList<Superhero> superheroList){
+        return db.sortByIsHuman(superheroList);
    }
-   public ArrayList<Superhero> sortByStrength(){
-        return db.sortByStrength();
-   }
-
-   public ArrayList<Superhero> sortByPrimarySecondary(int a, int b){
-        return db.sortByPrimarySecondary(a,b);
+   public ArrayList<Superhero> sortByStrength(ArrayList<Superhero> superheroList){
+        return db.sortByStrength(superheroList);
    }
 
-   // String name, String realName, String superPower, int yearCreated, String isHuman, double strength
+   public ArrayList<Superhero> sortByPrimarySecondary(int a, int b,ArrayList<Superhero> superheroList){
+        return db.sortByPrimarySecondary(a,b,superheroList);
+   }
+
 }

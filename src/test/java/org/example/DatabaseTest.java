@@ -14,6 +14,7 @@ class DatabaseTest {
     Database db;
     FileHandler fileHandler = new FileHandler();
     ArrayList<Superhero> testList = new ArrayList<>();
+    File testFile = new File("TestSuperheroData.csv");
     @BeforeEach
     void setUp() {
         db = new Database();
@@ -64,16 +65,12 @@ class DatabaseTest {
 
     }
     @Test
-    void saveSuperhero(){ //TODO make a parameter for the saveData method
-        File file = new File("TestSuperheroData.csv");
-        try {
-            PrintStream printStream = new PrintStream(file);
-            for (Superhero superhero:testList) {
-                printStream.print(fileHandler.toCsv(superhero));
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("fil ikke fundet");
-        }
+    void loadData(){
+        ArrayList<Superhero> loaded = fileHandler.loadData(testFile);
+        String actualName = loaded.get(0).getName();
+        String expectedName = "test";
+        assertEquals(actualName, expectedName);
+
 
     }
     @Test
@@ -81,7 +78,7 @@ class DatabaseTest {
         ArrayList<Superhero> sorted = db.sortByName();
         String actualName = sorted.get(0).getName();
         String expectedName = "abe";
-        assertEquals(actualName,expectedName);
+        assertEquals(actualName, expectedName);
     }
 
 

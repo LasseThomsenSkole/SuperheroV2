@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileHandler {
-    private String FILE_NAME = "SuperheroData.csv";
+    private final String FILE_NAME = "SuperheroData.csv";
+    private final File file = new File(FILE_NAME);
 
-    private File file = new File(FILE_NAME);
-    public ArrayList<Superhero> loadData(){
+    public ArrayList<Superhero> loadData(File file){
         ArrayList<Superhero> tempSuperhero = new ArrayList<>();
         Scanner scan;
         try {
@@ -84,6 +84,10 @@ public class FileHandler {
              lastLine = scanner.nextLine();
          }
          return lastLine;
+    }
+
+    public File getFile() {
+        return file;
     }
 
     public boolean lastSuperheroCheck(ArrayList<Superhero> superheroesList){

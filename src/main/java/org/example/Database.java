@@ -131,7 +131,7 @@ public class Database {
 
     //load the file into the program
     public void loadData(){
-        superheroList = fileHandler.loadData();
+        superheroList = fileHandler.loadData(fileHandler.getFile());
     }
 
     //Save the new superheroes from the program into the file

@@ -70,8 +70,6 @@ class DatabaseTest {
         String actualName = loaded.get(0).getName();
         String expectedName = "test";
         assertEquals(actualName, expectedName);
-
-
     }
     @Test
     void sortByName(){
@@ -80,6 +78,12 @@ class DatabaseTest {
         String expectedName = "abe";
         assertEquals(actualName, expectedName);
     }
-
+    @Test
+    void sortByBirthYear(){
+        ArrayList<Superhero> sorted = db.sortByBirthYear();
+        int actualBirthYear = sorted.get(0).getYearCreated();
+        int expectedName = 225;
+        assertEquals(actualBirthYear, expectedName);
+    }
 
 }

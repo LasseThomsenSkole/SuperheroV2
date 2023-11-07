@@ -1,10 +1,6 @@
 package org.example;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class Database {
     private ArrayList<Superhero> superheroList;
@@ -143,5 +139,78 @@ public class Database {
         fileHandler.saveData(superheroList);
     }
 
+    //Sort methods
+    public ArrayList<Superhero> sortByName(){
+        ArrayList<Superhero> sortedList = new ArrayList<>();
+        sortedList.addAll(superheroList);
+        Collections.sort(sortedList, new NameComparator());
+        return sortedList;
+    }
+    public ArrayList<Superhero> sortByRealName(){
+        ArrayList<Superhero> sortedList = new ArrayList<>();
+        sortedList.addAll(superheroList);
+        Collections.sort(sortedList, new RealNameComparator());
+        return sortedList;
+    }
+    public ArrayList<Superhero> sortBySuperpower(){
+        ArrayList<Superhero> sortedList = new ArrayList<>();
+        sortedList.addAll(superheroList);
+        Collections.sort(sortedList, new SuperPowerComparator());
+        return sortedList;
+    }
+    public ArrayList<Superhero> sortByBirthYear(){
+        ArrayList<Superhero> sortedList = new ArrayList<>();
+        sortedList.addAll(superheroList);
+        Collections.sort(sortedList, new BirthYearComparator());
+        return sortedList;
+    }
+    public ArrayList<Superhero> sortByIsHuman(){
+        ArrayList<Superhero> sortedList = new ArrayList<>();
+        sortedList.addAll(superheroList);
+        Collections.sort(sortedList, new IsHumanComparator());
+        return sortedList;
+    }
+    public ArrayList<Superhero> sortByStrength(){
+        ArrayList<Superhero> sortedList = new ArrayList<>();
+        sortedList.addAll(superheroList);
+        Collections.sort(sortedList, new StrengthComparator());
+        return sortedList;
+    }
+
+    public ArrayList<Superhero> sortByPrimarySecondary(int a, int b){
+        ArrayList<Superhero> sortedList = new ArrayList<>();
+        sortedList.addAll(superheroList);
+
+        Comparator<Superhero> comparator1 = null;
+        Comparator<Superhero> comparator2 = null;
+
+        switch (a){
+            case 1 -> comparator1 = new NameComparator();
+            case 2 -> comparator1 = new RealNameComparator();
+            case 3 -> comparator1 = new SuperPowerComparator();
+            case 4 -> comparator1 = new BirthYearComparator();
+            case 5 -> comparator1 = new IsHumanComparator();
+            case 6 -> comparator1 = new StrengthComparator();
+        }
+
+        switch (b) {
+            case 1 -> comparator2 = new NameComparator();
+            case 2 -> comparator2 = new RealNameComparator();
+            case 3 -> comparator2 = new SuperPowerComparator();
+            case 4 -> comparator2 = new BirthYearComparator();
+            case 5 -> comparator2 = new IsHumanComparator();
+            case 6 -> comparator2 = new StrengthComparator();
+        }
+
+
+        if(!comparator1.getClass().equals(comparator2.getClass())) {
+            Collections.sort(sortedList, comparator1.thenComparing(comparator2));
+        }
+            else{
+                throw new IllegalArgumentException();
+            }
+        return sortedList;
+        }
 }
+
 

@@ -12,7 +12,12 @@ public class FileHandler {
     private final File file = new File(FILE_NAME);
     public ArrayList<Superhero> loadData(){
         ArrayList<Superhero> tempSuperhero = new ArrayList<>();
-        Scanner scan = new Scanner(FILE_NAME);
+        Scanner scan = null;
+        try {
+            scan = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         String name;
         String realName;
         String superpower;
@@ -84,8 +89,8 @@ public class FileHandler {
     public boolean lastSuperheroCheck(ArrayList<Superhero> superheroesList){
         String[] superheroCsv = getLastLine().split(";");
 
-        String superheroListName = superheroesList.get(superheroesList.size()).getName();
-        String superheroListSuperpower = superheroesList.get(superheroesList.size()).getSuperPower();
+        String superheroListName = superheroesList.get((superheroesList.size()) - 1).getName();
+        String superheroListSuperpower = superheroesList.get((superheroesList.size()) -1).getSuperPower();
         String superheroCsvName = superheroCsv[0];
         String superheroCsvSuperpower = superheroCsv[2];
 

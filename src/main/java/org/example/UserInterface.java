@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -14,7 +13,6 @@ public class UserInterface {
         Scanner keyboard = new Scanner(System.in);
         int menuInput = 0;
         Controller controller = new Controller();
-        //
         controller.loadData();
         //programloop
         do {
@@ -37,6 +35,7 @@ public class UserInterface {
             } catch (InputMismatchException e) {
                 System.out.println("Fejl, tast et tal fra menuen");
                 keyboard.nextLine();
+
             }
             switch (menuInput) {
                 case 1: //add superhero
@@ -254,7 +253,46 @@ public class UserInterface {
                     System.out.println();
                     break;
                 case 9: //sortere
-                    Collections.sort(controller.getSuperheroList(), new NameComparator());
+                    System.out.println("""
+                                    1. Sorter efter Navn
+                                    2. Sorter efter Ægte Navn
+                                    3. Sorter efter Superkræft
+                                    4. Sorter efter Oprettelsesår
+                                    5. Sorter efter ErMenneske
+                                    6. Sorter efter Styrke
+                                    7. Sorter efter Primær og Sekundær
+                                    """);
+                    menuInput = keyboard.nextInt();
+                    switch (menuInput){
+                        case 1 -> System.out.println(controller.sortByName());
+                        case 2 -> System.out.println(controller.sortByRealname());
+                        case 3 -> System.out.println(controller.sortBySuperpower());
+                        case 4 -> System.out.println(controller.sortByBirthYear());
+                        case 5 -> System.out.println(controller.sortByIsHuman());
+                        case 6 -> System.out.println(controller.sortByStrength());
+                        case 7 -> {
+                                System.out.println("""
+                                        Indtast de to ønskede tal til at sortere i primary og secondary.
+                                        1. Sorter efter Navn
+                                        2. Sorter efter Ægte Navn
+                                        3. Sorter efter Superkræft
+                                        4. Sorter efter Oprettelsesår
+                                        5. Sorter efter ErMenneske
+                                        6. Sorter efter Styrke""");
+                                try{
+                                    System.out.println("vælg primær");
+                                    int primary = keyboard.nextInt();
+                                    System.out.println("vælg sekundær");
+                                    int secondary = keyboard.nextInt();
+                                    System.out.println(controller.sortByPrimarySecondary(primary, secondary));
+                                }catch (IllegalArgumentException illegalArgumentException){
+                                    System.out.println("Du kan ikke vælge 2 af den samme");
+                                }catch (InputMismatchException inputMismatchException){
+                                    System.out.println("Du skal skrive et tal!");
+                                }
+                        }
+
+                    }
 
                 case 10: //afslut
                     controller.saveData();
@@ -262,7 +300,7 @@ public class UserInterface {
 
         } while (!(menuInput ==10));}    //tryk 9 for afslut
 
-
+    //public void
 }
 
 

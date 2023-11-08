@@ -2,7 +2,7 @@ package org.example;
 
 public class Superhero {
 
-    //Attributters
+    //Attributes
     private String name;
     private String superPower;
     private int yearCreated;

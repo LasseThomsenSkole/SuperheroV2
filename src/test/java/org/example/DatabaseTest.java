@@ -41,11 +41,8 @@ class DatabaseTest {
     void searchSuperhero() {
         String expectedName = "troldmand";
         Superhero result = db.searchSuperhero("troldmand");
-
         assertNotNull(result);
-
         String actualName = result.getName();
-
         assertEquals(expectedName, actualName);
     }
     @Test

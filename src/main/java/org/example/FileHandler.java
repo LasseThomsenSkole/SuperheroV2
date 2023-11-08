@@ -15,26 +15,25 @@ public class FileHandler {
         Scanner scan;
         try {
             scan = new Scanner(file);
+            String name;
+            String realName;
+            String superpower;
+            int birthYear;
+            String isHuman;
+            double strength;
+            while(scan.hasNextLine()) {
+                String[] superheroCsv = scan.nextLine().split(";");
+                name = superheroCsv[0];
+                realName = superheroCsv[1];
+                superpower = superheroCsv[2];
+                birthYear = Integer.parseInt(superheroCsv[3]);
+                isHuman = superheroCsv[4];
+                strength = Double.parseDouble(superheroCsv[5]);
+                tempSuperhero.add(new Superhero(name, realName, superpower, birthYear, isHuman, strength));
+            }
+            scan.close(); // close scanner
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
-        }
-        String name;
-        String realName;
-        String superpower;
-        int birthYear;
-        String isHuman;
-        double strength;
-        while(scan.hasNextLine()) {
-            String[] superheroCsv = scan.nextLine().split(";");
-            name = superheroCsv[0];
-            realName = superheroCsv[1];
-            superpower = superheroCsv[2];
-            birthYear = Integer.parseInt(superheroCsv[3]);
-            isHuman = superheroCsv[4];
-            strength = Double.parseDouble(superheroCsv[5]);
-
-            tempSuperhero.add(new Superhero(name, realName, superpower, birthYear, isHuman, strength));
-
         }
         return tempSuperhero;
     }
@@ -47,6 +46,7 @@ public class FileHandler {
                 for (Superhero superhero : superheroList) {
                     printStream.print(toCsv(superhero));
                 }
+                printStream.close(); //close the printStream
             } catch (FileNotFoundException e) {
                 System.out.println("fil ikke fundet");
             }
@@ -71,19 +71,21 @@ public class FileHandler {
                     "\n";
         }
     }
-    public String getLastLine(){
+    public String getLastLine() {
         Scanner scanner;
+        String lastLine;
         try {
             scanner = new Scanner(file);
+            lastLine = null;
+            scanner.nextLine();
+            while (scanner.hasNextLine()) {
+                lastLine = scanner.nextLine();
+            }
+            scanner.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-        String lastLine = null;
-        scanner.nextLine();
-         while (scanner.hasNextLine()){
-             lastLine = scanner.nextLine();
-         }
-         return lastLine;
+        return lastLine;
     }
 
     public File getFile() {

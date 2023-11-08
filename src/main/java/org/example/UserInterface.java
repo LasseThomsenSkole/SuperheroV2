@@ -14,7 +14,7 @@ public class UserInterface {
         int menuInput = 0;
         Controller controller = new Controller();
         controller.loadData();
-        //programloop
+        //program loop
         do {
             System.out.println("""
                         1. opret
@@ -130,7 +130,7 @@ public class UserInterface {
                         }
                         int choice;
 
-                        while (true) { //loop for the userchoice of superheroes
+                        while (true) { //loop for the user choice of superheroes
                             String choiceInput = keyboard.nextLine();
 
                             try {
@@ -148,7 +148,7 @@ public class UserInterface {
 
                         superheroToBeEdited = editSearchResult.get(choice - 1);
                     } else {
-                        superheroToBeEdited = editSearchResult.get(0); //den første i arraylisten
+                        superheroToBeEdited = editSearchResult.get(0); //the first superhero
                     }
                     if (superheroToBeEdited != null) {
                         System.out.println("Rediger superhelt. Tryk Enter hvis du ikke ville ændre værdien.");
@@ -180,7 +180,7 @@ public class UserInterface {
                             }
                         }
 
-                        //Is human ?
+                        //Is human
                         System.out.println("Er din superhelt et menneske? " + superheroToBeEdited.getIsHuman());
                         String editIsHuman = null;
                         String inputIsHuman;
@@ -227,18 +227,18 @@ public class UserInterface {
                     break;
                 case 5: //delete superhero
                     System.out.println("Skriv navnet på helten du vil slette: ");
-                    keyboard.nextLine(); //scanner bug håndtering.
+                    keyboard.nextLine(); //scanner bug
                     String superheroToDelete = keyboard.nextLine();
                     controller.deleteSuperhero(superheroToDelete);
                     break;
 
-                case 6: //save superherolist
+                case 6: //save superheroList
                     controller.saveData(controller.getSuperheroList());
                     break;
                 case 7: //load SuperheroData.csv
                     controller.loadData();
                     break;
-                case 8: //udskrive hele listen
+                case 8: //print superheroList
                     int count = 1;
                     for (Superhero superhero : controller.getSuperheroList()) {
                             System.out.println(count++ + ". " +
@@ -252,7 +252,7 @@ public class UserInterface {
                     }
                     System.out.println();
                     break;
-                case 9: //sortere
+                case 9: //sort
                     System.out.println("""
                                     1. Sorter efter Navn
                                     2. Sorter efter Ægte Navn
